@@ -147,7 +147,7 @@ if predict:
         input_scaled
     )[0][1]
 
-probability = probability * 0.35
+    probability = probability * 0.35
 
 
     risk_percent = probability * 100
