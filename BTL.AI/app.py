@@ -27,10 +27,19 @@ st.set_page_config(
 # LOAD MODEL
 # =========================================================
 
-model = joblib.load("model.pkl")
+import os
 
-scaler = joblib.load("scaler.pkl")
+BASE_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
 
+model = joblib.load(
+    os.path.join(BASE_DIR, "model.pkl")
+)
+
+scaler = joblib.load(
+    os.path.join(BASE_DIR, "scaler.pkl")
+)
 # =========================================================
 # TITLE
 # =========================================================
